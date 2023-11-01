@@ -1,0 +1,6 @@
+discord.py
+watchfiles
+PyYAML
+aiofiles
+b2sdk
+aiohttp

@@ -1,0 +1,174 @@
+guild_id: 1094146371650601022
+owner_id: 960526101833191435
+mod_channel_id: 1163621515686838282
+notable_posts_channel_id: 1094206013005107270
+
+bot:
+  command_prefix: "."
+  
+rank_hierarchy:
+  - 1094205803185045524 # Daiou
+  - 1094205798063804417 # Taikou
+  - 1094205792921604107 # N1
+  - 1094205787271876619 # N2
+  - 1094205781756366912 # N3
+  - 1094205777083912213 # N4
+  - 1094205771891351597 # Unranked
+
+rank_system:
+  failure_announce_channels: 
+    - 1094206058270044221 # join-quiz
+    - 1094206064129478746 # join-quiz2
+  success_announce_channel: 1094205985406582784 # general
+  rank_data:
+  - name: "n4"
+    points: 14
+    max_time: 10000
+    font: "any"
+    font_size: 80
+    allowed_fails: 1
+    rank_to_have: 1094205771891351597 # Unranked
+    rank_to_get: 1094205777083912213 # N4
+    command: "k!quiz n4 nodelay atl=10 14 font=1 size=80 mmq=2"
+    file_to_send: "data/omedetou.mp4"
+  - name: "n3"
+    points: 18
+    max_time: 10000
+    font: "any"
+    font_size: 60
+    allowed_fails: 0
+    rank_to_have: 1094205777083912213 # N4
+    rank_to_get: 1094205781756366912 # N3
+    command: "k!quiz n3 nodelay atl=10 18 font=1 size=60 mmq=1"
+    file_to_send: "data/omedetou.mp4"
+  - name: "n2"
+    points: 20
+    max_time: 10000
+    font: "AC Gyousho"
+    font_size: 40
+    allowed_fails: 0
+    rank_to_have: 1094205781756366912 # N3
+    rank_to_get: 1094205787271876619 # N2
+    command: "k!quiz n2 nodelay atl=10 20 font=10 size=40 mmq=1"
+    file_to_send: "data/omedetou.mp4"
+  - name: "n1"
+    points: 25
+    max_time: 9000
+    font: "Aoyagi Kouzan Gyousho"
+    font_size: 35
+    allowed_fails: 0
+    rank_to_have: 1094205787271876619 # N2
+    rank_to_get: 1094205792921604107 # N1
+    command: "k!quiz n1 nodelay atl=9 25 font=7 size=35 mmq=1"
+    file_to_send: "data/omedetou.mp4"
+  - name: "yoji_2k+yoji_j1k+2k+j1k+insane"
+    points: 30
+    max_time: 12000
+    font: "AC Gyousho"
+    font_size: 30
+    allowed_fails: 0
+    rank_to_have: 1094205792921604107 # N1
+    rank_to_get: 1094205798063804417 # Taikou
+    command: "k!quiz yoji_2k+yoji_j1k+2k+j1k+insane nodelay atl=12 30 font=10 size=30 mmq=1"
+    file_to_send: "data/omedetou.mp4"
+  - name: "yoji_1k+1k"
+    points: 35
+    max_time: 12000
+    font: "AC Gyousho"
+    font_size: 30
+    allowed_fails: 0
+    rank_to_have: 1094205798063804417 # N1
+    rank_to_get: 1094205803185045524 # Taikou
+    command: "k!quiz yoji_1k+1k nodelay atl=12 35 font=10 size=30 mmq=1"
+    file_to_send: "data/daiuoh.mp4"
+
+
+bump:
+  channel_id: 1094206036891680788
+  role_id: 1094205714114826330
+
+custom_roles:
+  allowed_roles:
+    - 1094205803185045524 # Daiou
+    - 1094205798063804417 # Taikou
+    - 1094251888972673144 # Server Booster
+  reference_role: 1094205912463446116 # Pos. Reference Role
+    
+deleted_messages:
+  clear_after_hours: 24
+  log_channel: 1094206075697373264  # Elite-Mod
+
+assignable_roles:
+  assignable:
+    - id: 1094205756053651516
+      description: Book club and access to the book channel.
+      emoji: 📚
+    - id: 1094205724512497804
+      description: Anime club and notifications about the monthly anime.
+      emoji: 🍥
+    - id: 1094205745781821510
+      description: Mentionable role for group reading events.
+      emoji: 📖
+    - id: 1094205735589654578
+      description: Mentionable role for having Japanese conversations.
+      emoji: 🗣
+    - id: 1094205730023804968
+      description: Role for the movie evenings.
+      emoji: 🍿
+    - id: 1094205698948210688
+      description: Role for general purpose events such as karaoke, challenges or competitions.
+      emoji: 🎤
+    - id: 1094205766547800074
+      description: Visual novel reading challenge and access to the VN channel.
+      emoji: 🎮
+    - id: 1094205714114826330
+      description: Get notifications when a bump is due.
+      emoji: ⏰
+    - id: 1131890786150142013
+      description: Get notified about selected airing anime and discuss them!
+      emoji: 📺
+  forbidden:
+    - 1094205771891351597 # Unranked
+
+auto_receive:
+  - role_to_have: 1094251888972673144 # Server Booster
+    role_to_get: 1094205704144957440 # Emoji
+  - role_to_have: 1094205803185045524 # Daiou
+    role_to_get: 1094205704144957440 # Emoji
+
+channels_to_clear:
+  - 1094205991316357150 # Artwork
+  - 1094206075697373264 # Elite-Mod
+
+clubs:
+  - club_name: VN Challenge
+    club_prefix: vnc
+    club_channel: 1094205997205180466
+    manager_role: 1094205761325895751
+    point_suffix: ☆
+    check_point_roles:
+        8: 1094205647559598141
+        1: 1094205642258010194
+
+  - club_name: Book Club
+    club_prefix: book
+    club_channel: 1094206002464837773
+    manager_role: 1094205750823366746
+    point_suffix: 📚
+
+  - club_name: Anime Challenge
+    club_prefix: anime
+    club_channel: 1094206007518957610
+    manager_role: 1094205719231877170
+    point_suffix: 📺
+
+join_leave_message_settings:
+  join_message: "Hello <USERMENTION>! Welcome to <GUILDNAME>. Access to all channels is restricted to Japanese learners! \nTo join type `k!quiz n4 nodelay atl=10 14 font=1 size=80 mmq=2` and get 14 points (max 1 failed question). You have unlimited tries.\n\nNot sure how to learn Japanese yet? Check out the following site:\n<https://animecards.site/learningjapanese/> \n\nこんにちは<USERMENTION>さん! <GUILDNAME>へようこそ\nこのサーバーは日本語検定でN4級以上の日本語力がある方にのみ入室が許可されています。 `k!quiz n4 nodelay atl=10 14 font=1 size=80 mmq=2`と入力し、日本語のテストを開始してください。 合格点は14点、ミスは2回までです。何回でもチャレンジしてください。"
+  default_role: 1094205771891351597 # Unranked
+  join_message_channel: 1094206058270044221 # join-quiz
+  join_message_file: data/irasshaimase.mp4
+  leave_message: "**<USERNAME>** (<RANK>) just left the server."
+  leave_message_channel: 1094205985406582784 # General
+  leave_message_file: data/leavevideo.mp4
+  additional_message: "<USERMENTION> joined the server. Account creation date: <CREATIONDATE>"
+  additional_message_channel: 1094205985406582784 # General
