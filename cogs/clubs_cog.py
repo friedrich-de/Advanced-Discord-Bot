@@ -329,7 +329,6 @@ class Clubs(commands.Cog):
     @discord.app_commands.autocomplete(
         club=clubs_autocomplete, beginning_period=time_period_autocomplete, end_period=time_period_autocomplete
     )
-    @discord.app_commands.default_permissions(administrator=True)
     async def add_work(
         self,
         interaction: discord.Interaction,
@@ -367,7 +366,6 @@ class Clubs(commands.Cog):
     @discord.app_commands.command(name="remove_work", description="Remove a work from a club.")
     @discord.app_commands.describe(club="Name or shorthand of the club", short_id="ID of the work to remove.")
     @discord.app_commands.autocomplete(club=clubs_autocomplete, short_id=works_autocomplete)
-    @discord.app_commands.default_permissions(administrator=True)
     async def remove_work(self, interaction: discord.Interaction, club: str, short_id: str):
         is_club_manager = await self.check_if_club_manager(interaction.user, club)
         if not is_club_manager:
