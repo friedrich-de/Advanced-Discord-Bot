@@ -417,7 +417,7 @@ class Clubs(commands.Cog):
         else:
             old_total_points = sum([reward_data[1] for reward_data in user_data[member.id]])
 
-        for work_id, points in user_data[member.id]:
+        for work_id, saved_points in user_data[member.id]:
             if work_id == work_name:
                 await interaction.response.send_message(
                     f"User `{member}` already has work `{work_name}` ({full_work_name}) rewarded to them in the `{club}`."
